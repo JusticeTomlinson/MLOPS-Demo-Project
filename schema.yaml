@@ -1,1 +1,19 @@
-key: val
+COLUMNS:
+  sex: object
+  age: int64
+  education: int64
+  smokingStatus: object
+  cigsPerDay: int64
+  BPMeds: int64
+  prevalentStroke: int64
+  prevalentHyp: int64
+  diabetes: object
+  totChol: int64
+  sysBP: float64
+  diaBP: float64
+  BMI: float64
+  heartRate: int64
+  glucose: int64
+
+TARGET_COLUMN:
+  CHDRisk: object
