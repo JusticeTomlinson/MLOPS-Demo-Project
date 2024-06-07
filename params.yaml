@@ -1,1 +1,11 @@
-key: val
+HeartDiseaseNN:
+  # alpha: 0.5
+  # l1_ratio: 0.7
+  learning_rate: 0.01
+  input_dim: 15
+  hidden1_dim: 30
+  hidden2_dim: 30
+  output_dim: 2
+  criterion: "cross entropy loss"
+  optimizer: "adam"
+  num_epochs: 15

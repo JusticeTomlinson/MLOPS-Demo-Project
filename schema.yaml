@@ -1,19 +1,20 @@
 COLUMNS:
-  sex: object
-  age: int64
-  education: int64
-  smokingStatus: object
-  cigsPerDay: int64
-  BPMeds: int64
-  prevalentStroke: int64
-  prevalentHyp: int64
-  diabetes: object
-  totChol: int64
-  sysBP: float64
-  diaBP: float64
-  BMI: float64
-  heartRate: int64
-  glucose: int64
+  sex: int32
+  age: int32
+  education: int32
+  smokingStatus: int32
+  cigsPerDay: int32
+  BPMeds: int32
+  prevalentStroke: int32
+  prevalentHyp: int32
+  diabetes: int32
+  totChol: int32
+  sysBP: float32
+  diaBP: float32
+  BMI: float32
+  heartRate: int32
+  glucose: int32
+
 
 TARGET_COLUMN:
-  CHDRisk: object
+  name: CHDRisk
