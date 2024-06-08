@@ -23,3 +23,18 @@ class DataTransformationConfig:
     data_path: Path
 
 
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir: Path
+    train_data_path: Path
+    test_data_path: Path
+    model_name: str
+    target_column: str
+    learning_rate: float
+    input_dim: int 
+    hidden1_dim: int 
+    hidden2_dim: int 
+    output_dim: int
+    criterion: str
+    optimizer: str
+    num_epochs: int

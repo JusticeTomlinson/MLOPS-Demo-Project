@@ -2,7 +2,8 @@ from src.mlops_project.constants import *
 from src.mlops_project.utils.common import read_yaml, create_directories
 from src.mlops_project.entity.config_entity import (DataIngestionConfig, 
                                                     DataValidationConfig,
-                                                    DataTransformationConfig)
+                                                    DataTransformationConfig,
+                                                    ModelTrainingConfig)
 
 class ConfigurationManager:
     def __init__(self, 
@@ -54,3 +55,31 @@ class ConfigurationManager:
         )
         
         return data_transformation_config
+    
+
+    
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        params = self.params.HeartDiseaseNN
+        schema = self.schema.TARGET_COLUMN
+
+
+        create_directories([config.root_dir])
+
+        model_training_config = ModelTrainingConfig(
+            root_dir=config.root_dir,
+            train_data_path=config.train_data_path,
+            test_data_path=config.test_data_path,
+            model_name = config.model_name,
+            target_column = schema.name,
+            learning_rate = params.learning_rate,
+            input_dim = params.input_dim,
+            hidden1_dim = params.hidden1_dim,
+            hidden2_dim = params.hidden2_dim,
+            output_dim = params.output_dim,
+            criterion = params.criterion,
+            optimizer = params.optimizer,
+            num_epochs = params.num_epochs
+        )
+        
+        return model_training_config
