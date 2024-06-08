@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/d08a7a03a3994297919f0cc5a6777f9f/artifacts
+end_time: 1717840533289
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d08a7a03a3994297919f0cc5a6777f9f
+run_name: efficient-ray-153
+run_uuid: d08a7a03a3994297919f0cc5a6777f9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717840533249
+status: 4
+tags: []
+user_id: justi

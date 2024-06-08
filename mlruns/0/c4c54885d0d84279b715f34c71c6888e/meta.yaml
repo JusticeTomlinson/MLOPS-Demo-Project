@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/c4c54885d0d84279b715f34c71c6888e/artifacts
+end_time: 1717840556265
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c4c54885d0d84279b715f34c71c6888e
+run_name: likeable-ant-753
+run_uuid: c4c54885d0d84279b715f34c71c6888e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717840549834
+status: 3
+tags: []
+user_id: justi

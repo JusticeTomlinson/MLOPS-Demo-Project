@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/2a11d22e31eb40adb18c37900403da9a/artifacts
+end_time: 1717839736491
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2a11d22e31eb40adb18c37900403da9a
+run_name: masked-snipe-426
+run_uuid: 2a11d22e31eb40adb18c37900403da9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717839736460
+status: 4
+tags: []
+user_id: justi

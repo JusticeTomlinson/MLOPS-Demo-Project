@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/e37b620159ba4c3db45ae093abe45a90/artifacts
+end_time: 1717839776700
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e37b620159ba4c3db45ae093abe45a90
+run_name: clumsy-chimp-183
+run_uuid: e37b620159ba4c3db45ae093abe45a90
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717839776668
+status: 4
+tags: []
+user_id: justi
