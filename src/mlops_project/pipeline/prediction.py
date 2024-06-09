@@ -1,28 +1,17 @@
-from pathlib import Path
-import torch
-from src.mlops_project.entity.config_entity import ModelInferenceConfig
-from src.mlops_project.utils.model_architecture import NeuralNetwork
+
+from src.mlops_project.config.configuration import ConfigurationManager
+from src.mlops_project.components.model_inference import ModelInference
 
 
-
-class ModelInference:
-    def __init__(self, config: ModelInferenceConfig) -> None:
-        self.config=config
-    
+class ModelInferencePipeline:
+    def __init__(self) -> None:
+        pass
     def predict(self, input):
-
-        model = NeuralNetwork(self.config.input_dim, 
-                              self.config.hidden1_dim, 
-                              self.config.hidden2_dim, 
-                              self.config.output_dim)
         
-        model.load_state_dict(torch.load("model_path.pth"))
+        config = ConfigurationManager()
+        model_inference_config = config.get_model_inference_config()
+        model_inference_config = ModelInference(config=model_inference_config)
+        prediction = model_inference_config.predict(input)
 
-        input_tensor = torch.tensor(input, dtype=torch.float32)
-
-        with torch.no_grad():
-            output = model(input_tensor)
-            _, predicted_class = torch.max(output, dim=1)
-
-        return predicted_class
+        return prediction
         

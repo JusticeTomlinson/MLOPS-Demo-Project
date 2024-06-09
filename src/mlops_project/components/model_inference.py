@@ -13,7 +13,7 @@ class ModelInference:
                               self.config.hidden2_dim, 
                               self.config.output_dim)
         
-        model.load_state_dict(torch.load("model_path.pth"))
+        model.load_state_dict(torch.load(self.config.model_path))
 
         input_tensor = torch.tensor(input, dtype=torch.float32)
 

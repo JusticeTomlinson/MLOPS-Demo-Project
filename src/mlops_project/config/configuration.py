@@ -112,13 +112,13 @@ class ConfigurationManager:
         return model_training_config
     
 
-    def get_model_training_config(self) -> ModelInferenceConfig:
-        config = self.config.model_training
+    def get_model_inference_config(self) -> ModelInferenceConfig:
+        config = self.config.prediction
         params = self.params.HeartDiseaseNN
 
         model_training_config = ModelInferenceConfig(
-            root_dir=config.root_dir,
             model_path = config.model_path,
+            all_params = params,
             input_dim = params.input_dim,
             hidden1_dim = params.hidden1_dim,
             hidden2_dim = params.hidden2_dim,

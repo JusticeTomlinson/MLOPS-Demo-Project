@@ -3,8 +3,13 @@ import os
 import numpy as np
 import pandas as pd
 from src.mlops_project.pipeline.prediction import ModelInference
+from src.mlops_project.config.configuration import ConfigurationManager
+from src.mlops_project.pipeline.prediction import ModelInferencePipeline
 
-
+# config = ConfigurationManager()
+# model_inference_config = config.get_model_inference_config()
+# model_inference_config = ModelInference(config=model_inference_config)
+prediction_pipeline = ModelInferencePipeline()
 
 app = Flask(__name__) # initializing a flask app
 
@@ -46,10 +51,14 @@ def index():
                     diaBP, BMI, heartRate, glucose]
             data = np.array(data).reshape(1, 15)
             
-            obj = ModelInference()
-            predict = obj.predict(data)
+            predict = prediction_pipeline.predict(data)
+            predict = predict.item()
+            if predict == 1:
+                p_str = "The model predicts that this sample is at risk for chronic heart disease."
+            else:
+                p_str = "The model predicts that this sample is NOT at risk for chronic heart disease."
 
-            return render_template('results.html', prediction = str(predict))
+            return render_template('results.html', prediction = str(p_str))
 
         except Exception as e:
             print('The Exception message is: ',e)

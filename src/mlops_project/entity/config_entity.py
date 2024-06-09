@@ -61,3 +61,7 @@ class ModelEvaluationConfig:
 class ModelInferenceConfig:
     model_path: Path
     all_params: dict
+    input_dim: int 
+    hidden1_dim: int 
+    hidden2_dim: int 
+    output_dim: int
