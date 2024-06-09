@@ -4,7 +4,8 @@ from src.mlops_project.entity.config_entity import (DataIngestionConfig,
                                                     DataValidationConfig,
                                                     DataTransformationConfig,
                                                     ModelTrainingConfig,
-                                                    ModelEvaluationConfig)
+                                                    ModelEvaluationConfig,
+                                                    ModelInferenceConfig)
 
 class ConfigurationManager:
     def __init__(self, 
@@ -99,9 +100,29 @@ class ConfigurationManager:
             test_data_path=config.test_data_path,
             model_path=config.model_path,
             all_params=params,
+            input_dim = params.input_dim,
+            hidden1_dim = params.hidden1_dim,
+            hidden2_dim = params.hidden2_dim,
+            output_dim = params.output_dim,
             metric_file_name=config.metric_file_name,
             target_column=schema.name,
             mlflow_uri="https://dagshub.com/JusticeTomlinson/MLOPS-Demo-Project.mlflow"
+        )
+        
+        return model_training_config
+    
+
+    def get_model_training_config(self) -> ModelInferenceConfig:
+        config = self.config.model_training
+        params = self.params.HeartDiseaseNN
+
+        model_training_config = ModelInferenceConfig(
+            root_dir=config.root_dir,
+            model_path = config.model_path,
+            input_dim = params.input_dim,
+            hidden1_dim = params.hidden1_dim,
+            hidden2_dim = params.hidden2_dim,
+            output_dim = params.output_dim
         )
         
         return model_training_config

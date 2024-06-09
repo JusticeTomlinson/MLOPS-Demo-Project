@@ -35,8 +35,11 @@ class ModelEvaluation:
         test_data = test_data.dropna()
 
         # Load the PyTorch model (assuming it's saved with torch.save)
-        model = NeuralNetwork(15, 60, 60, 1)
-
+        model = NeuralNetwork(self.config.input_dim,
+                               self.config.hidden1_dim, 
+                               self.config.hidden2_dim, 
+                               self.config.output_dim)
+        self.config
 
         model.load_state_dict(torch.load(self.config.model_path))
 

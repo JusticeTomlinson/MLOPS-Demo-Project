@@ -12,21 +12,7 @@ from src.mlops_project.config.configuration import ModelTrainingConfig
 from src.mlops_project.utils.model_architecture import NeuralNetwork
 
 
-def resample_classes(dataframe):
-    df_majority = dataframe[dataframe["CHDRisk"] == 0]
-    df_minority = dataframe[dataframe["CHDRisk"] == 1]
 
-    minority_count = len(df_minority)
-
-    df_majority_downsampled = df_majority.sample(n=minority_count, random_state=42)  # Ensuring reproducibility
-
-    df_balanced = pd.concat([df_minority, df_majority_downsampled])
-
-    df_balanced = df_balanced.sample(frac=1, random_state=42).reset_index(drop=True)
-
-    #Turn all items within the table to float
-    df_balanced = df_balanced.astype(float)
-    return df_balanced
 
 
 
@@ -62,7 +48,6 @@ class ModelTraining:
         test_dataset = TensorDataset(X_test, y_test)
 
         train_loader = DataLoader(dataset=train_dataset, batch_size=10, shuffle=True)
-        test_loader = DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
 
         model = NeuralNetwork(self.config.input_dim, self.config.hidden1_dim, self.config.hidden2_dim, self.config.output_dim).to(device)
         criterion = nn.BCELoss()

@@ -12,7 +12,7 @@ class DataTransformation:
     
     def train_test_splitting(self):
         data = pd.read_csv(self.config.data_path)
-
+        data = data.dropna()
         data['CHDRisk'] = data['CHDRisk'].replace({'yes': 1, 'no': 0})
 
 

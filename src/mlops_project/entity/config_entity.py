@@ -47,6 +47,17 @@ class ModelEvaluationConfig:
     test_data_path: Path
     model_path: Path
     all_params: dict
+    input_dim: int 
+    hidden1_dim: int 
+    hidden2_dim: int 
+    output_dim: int
     metric_file_name: Path
     target_column: str
     mlflow_uri: str
+
+
+
+@dataclass(frozen=True)
+class ModelInferenceConfig:
+    model_path: Path
+    all_params: dict

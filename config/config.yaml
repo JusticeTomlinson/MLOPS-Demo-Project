@@ -33,4 +33,5 @@ model_evaluation:
   metric_file_name: artifacts/model_evaluation/metrics.json
 
 
-
+prediction:
+  model_path: artifacts/model_training/heart_model.pth 

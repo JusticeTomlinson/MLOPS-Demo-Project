@@ -10,7 +10,7 @@ from box import ConfigBox
 from pathlib import Path
 from typing import Any
 import numpy as np
-
+import pandas as pd
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
@@ -136,3 +136,18 @@ def get_size(path: Path) -> str:
 
 
 
+def resample_classes(dataframe):
+    df_majority = dataframe[dataframe["CHDRisk"] == 0]
+    df_minority = dataframe[dataframe["CHDRisk"] == 1]
+
+    minority_count = len(df_minority)
+
+    df_majority_downsampled = df_majority.sample(n=minority_count, random_state=42)
+
+    df_balanced = pd.concat([df_minority, df_majority_downsampled])
+
+    df_balanced = df_balanced.sample(frac=1, random_state=42).reset_index(drop=True)
+
+    #Turn all items within the table to float
+    df_balanced = df_balanced.astype(float)
+    return df_balanced
