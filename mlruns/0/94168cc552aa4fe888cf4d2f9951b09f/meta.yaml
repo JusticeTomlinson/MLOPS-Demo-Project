@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/94168cc552aa4fe888cf4d2f9951b09f/artifacts
+end_time: 1717886881576
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 94168cc552aa4fe888cf4d2f9951b09f
+run_name: judicious-donkey-643
+run_uuid: 94168cc552aa4fe888cf4d2f9951b09f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717886875654
+status: 3
+tags: []
+user_id: justi

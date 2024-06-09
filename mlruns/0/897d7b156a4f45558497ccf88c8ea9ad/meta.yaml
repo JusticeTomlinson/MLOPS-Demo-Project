@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/897d7b156a4f45558497ccf88c8ea9ad/artifacts
+end_time: 1717891074196
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 897d7b156a4f45558497ccf88c8ea9ad
+run_name: shivering-hound-386
+run_uuid: 897d7b156a4f45558497ccf88c8ea9ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717891070423
+status: 3
+tags: []
+user_id: justi

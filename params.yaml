@@ -6,4 +6,4 @@ HeartDiseaseNN:
   output_dim: 1
   criterion: "cross entropy loss"
   optimizer: "adam"
-  num_epochs: 60
+  num_epochs: 30

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/0eafdf5e977a4f7bbaab28d574c7b7ea/artifacts
+end_time: 1717892326500
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0eafdf5e977a4f7bbaab28d574c7b7ea
+run_name: resilient-hare-759
+run_uuid: 0eafdf5e977a4f7bbaab28d574c7b7ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717892323004
+status: 4
+tags: []
+user_id: justi

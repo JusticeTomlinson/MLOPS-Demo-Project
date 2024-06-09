@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/0352dd39d16546d4a71ad71f1c880c83/artifacts
+end_time: 1717891177641
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0352dd39d16546d4a71ad71f1c880c83
+run_name: funny-deer-339
+run_uuid: 0352dd39d16546d4a71ad71f1c880c83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717891174371
+status: 3
+tags: []
+user_id: justi

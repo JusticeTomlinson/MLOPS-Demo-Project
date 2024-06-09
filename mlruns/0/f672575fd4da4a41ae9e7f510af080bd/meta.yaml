@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/justi/Desktop/MLOps%20Demo/MLOPS-Demo-Project/mlruns/0/f672575fd4da4a41ae9e7f510af080bd/artifacts
+end_time: 1717891244443
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f672575fd4da4a41ae9e7f510af080bd
+run_name: bald-fawn-947
+run_uuid: f672575fd4da4a41ae9e7f510af080bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1717891244314
+status: 3
+tags: []
+user_id: justi

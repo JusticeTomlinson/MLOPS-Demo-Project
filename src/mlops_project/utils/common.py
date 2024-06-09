@@ -9,7 +9,7 @@ from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
-
+import numpy as np
 
 
 @ensure_annotations
@@ -53,17 +53,25 @@ def create_directories(path_to_directories: list, verbose=True):
 
 
 @ensure_annotations
-def save_json(path: Path, data: dict):
-    """save json data
 
-    Args:
-        path (Path): path to json file
-        data (dict): data to be saved in json file
-    """
-    with open(path, "w") as f:
-        json.dump(data, f, indent=4)
+def save_json(path, data):
+    import json
+    with open(path, 'w') as f:
+        # Convert NumPy types to Python native types explicitly
+        converted_data = {k: (v.item() if isinstance(v, np.generic) else v) for k, v in data.items()}
+        json.dump(converted_data, f)
 
-    logger.info(f"json file saved at: {path}")
+# def save_json(path: Path, data: dict):
+#     """save json data
+
+#     Args:
+#         path (Path): path to json file
+#         data (dict): data to be saved in json file
+#     """
+#     with open(path, "w") as f:
+#         json.dump(data, f, indent=4)
+
+#     logger.info(f"json file saved at: {path}")
 
 
 

@@ -28,7 +28,7 @@ class ModelTrainingConfig:
     root_dir: Path
     train_data_path: Path
     test_data_path: Path
-    model_name: str
+    model_path: str
     target_column: str
     learning_rate: float
     input_dim: int 
@@ -38,3 +38,15 @@ class ModelTrainingConfig:
     criterion: str
     optimizer: str
     num_epochs: int
+
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_data_path: Path
+    model_path: Path
+    all_params: dict
+    metric_file_name: Path
+    target_column: str
+    mlflow_uri: str
