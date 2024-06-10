@@ -14,5 +14,3 @@
 9. Update the app.py
 
 
-
-URI= 271384303675.dkr.ecr.us-east-2.amazonaws.com/mlops_demo
