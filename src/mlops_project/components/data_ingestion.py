@@ -6,7 +6,7 @@ from src.mlops_project.utils.common import get_size
 from pathlib import Path
 from src.mlops_project.entity.config_entity import (DataIngestionConfig)
 
-
+#need to test
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
         self.config=config
