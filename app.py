@@ -6,9 +6,6 @@ from src.mlops_project.pipeline.prediction import ModelInference
 from src.mlops_project.config.configuration import ConfigurationManager
 from src.mlops_project.pipeline.prediction import ModelInferencePipeline
 
-# config = ConfigurationManager()
-# model_inference_config = config.get_model_inference_config()
-# model_inference_config = ModelInference(config=model_inference_config)
 prediction_pipeline = ModelInferencePipeline()
 
 app = Flask(__name__) # initializing a flask app
@@ -24,7 +21,7 @@ def training():
     return "Training Successful!" 
 
 
-@app.route('/predict',methods=['POST','GET']) # route to show the predictions in a web UI
+@app.route('/predict',methods=['POST','GET']) # route to show the predictions in web UI
 def index():
     if request.method == 'POST':
         try:
@@ -69,5 +66,4 @@ def index():
 
 
 if __name__ == "__main__":
-	# app.run(host="0.0.0.0", port = 8080, debug=True)
 	app.run(host="0.0.0.0", port = 8080)
